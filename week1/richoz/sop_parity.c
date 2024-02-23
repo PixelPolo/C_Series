@@ -1,3 +1,11 @@
+/* 
+Please do not change the name of this file. 
+
+Name (of all group members): Paul Ricci & Julien Richoz
+Date: 23.02.2024
+Program runs (yes or no, because): Yes
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 

@@ -2,7 +2,7 @@
 *.o
 
 # Ignorer les fichiers exécutables (sur Linux/Unix)
-a.out
+*.out
 *.exe # Pour Windows
 
 # Ignorer les dossiers de build spécifiques
