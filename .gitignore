@@ -1,17 +1,17 @@
 # Ignorer les fichiers objets
-*.o
+.o
 
 # Ignorer les fichiers exécutables (sur Linux/Unix)
-*.out
+.out
 # Pour Windows
-*.exe
+.exe
 
 # Ignorer les dossiers de build spécifiques
 build/
 out/
 
 # Ignorer les fichiers de log
-*.log
+.log
 
 # Autres fichiers générés lors de la compilation peuvent être ajoutés ici
-*.DS_Store
+.DS_Store
