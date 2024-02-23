@@ -1,3 +1,3 @@
-#University of Fribourg SOP assignment
+# University of Fribourg SOP assignment
 
 Learning C
