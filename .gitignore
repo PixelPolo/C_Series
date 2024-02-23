@@ -3,7 +3,8 @@
 
 # Ignorer les fichiers exécutables (sur Linux/Unix)
 *.out
-*.exe # Pour Windows
+# Pour Windows
+*.exe
 
 # Ignorer les dossiers de build spécifiques
 build/
