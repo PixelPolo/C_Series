@@ -3,7 +3,7 @@ Please do not change the name of this file.
 
 Name (of all group members): Paul Ricci & Julien Richoz
 Date: 03-08-2024
-Program runs (yes or no, because):
+Program runs (yes or no, because): yes
 */
 
 #include <stdio.h>
