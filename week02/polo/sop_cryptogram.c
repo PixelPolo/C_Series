@@ -52,6 +52,6 @@ int main(int argc, char const *argv[])
     answer[length] = '\0';
     printf("Answer : %s\n", answer);
 
-    /* code */
+    // Return exit code
     return 0;
 }
