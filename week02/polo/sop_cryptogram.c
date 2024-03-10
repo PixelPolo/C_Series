@@ -15,7 +15,7 @@ Program runs (yes or no, because): yes
 int main(int argc, char const *argv[])
 {
     // Variables initialization
-    int length = strlen(CRYPTOGRAM);
+    int length = strlen(CRYPTOGRAM); // 56 letters
     int count = 17;
     int index = count;
     int c = 0;
@@ -32,13 +32,15 @@ int main(int argc, char const *argv[])
     answer[index] = CRYPTOGRAM[c++];
 
     // Iteration through the Cryptogram
+    // loop until c == 55 included
     while (c < length)
     {
-        // Skip slots with letters
+        // Skip slots with letters or count-- if not letters
         while (count != 0)
         {
             index++;
-            if (answer[index % length] == -1)
+            // 56 % 56 = 0 (going back to index 0)
+            if (answer[index % length] == -1) 
             {
                 count--;
             }
@@ -49,7 +51,8 @@ int main(int argc, char const *argv[])
     }
 
     // Print the answer
-    answer[length] = '\0';
+    // printf doesn't work if the string doesn't finish by '\0'
+    answer[length] = '\0'; 
     printf("Answer : %s\n", answer);
 
     // Return exit code
