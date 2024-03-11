@@ -29,8 +29,8 @@ int main(int argc, char const *argv[])
 void decrypt(char *cryptogram)
 {
     // Initialization of the answer array
-    char answer[LENGTH];
-    for (int i = 0; i <= LENGTH; i++)
+    char answer[LENGTH + 1];
+    for (int i = 0; i < LENGTH + 1; i++)
         answer[i] = '\0';
 
     // Add the first letter at position 17
