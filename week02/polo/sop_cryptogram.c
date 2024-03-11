@@ -12,49 +12,48 @@ Program runs (yes or no, because): yes
 // CRYPTOGRAM SYMBOLIC CONSTANT
 #define CRYPTOGRAM "T-LS-AOS--EEOIOAAUENTUOLUILRPDSA-S.LUNV-ENEGT-T-E-NLLSBE"
 
+// Static variables
+static const int LENGTH = strlen(CRYPTOGRAM);
+static const int GAP = 17;
+
+// Function prototype
+void decrypt(char *cryptogram);
+
 int main(int argc, char const *argv[])
 {
-    // Variables initialization
-    int length = strlen(CRYPTOGRAM); // 56 letters
-    int count = 17;
-    int index = count;
-    int c = 0;
+    decrypt(CRYPTOGRAM);
+    // Return exit code
+    return 0;
+}
 
+void decrypt(char *cryptogram)
+{
     // Initialization of the answer array
-    // No ASCII char is equal to -1...
-    char answer[length];
-    for (int i = 0; i < length; i++)
-    {
-        answer[i] = -1;
-    }
+    char answer[LENGTH];
+    for (int i = 0; i <= LENGTH; i++)
+        answer[i] = '\0';
 
     // Add the first letter at position 17
-    answer[index] = CRYPTOGRAM[c++];
+    int c = 0;
+    answer[GAP] = cryptogram[c++];
 
     // Iteration through the Cryptogram
-    // loop until c == 55 included
-    while (c < length)
+    int index = GAP;
+    while (c < LENGTH)
     {
         // Skip slots with letters or count-- if not letters
+        int count = GAP;
         while (count != 0)
         {
             index++;
             // 56 % 56 = 0 (going back to index 0)
-            if (answer[index % length] == -1) 
+            if (answer[index % LENGTH] == '\0')
             {
                 count--;
             }
         }
         // Add letter and reset the counter
-        answer[index % length] = CRYPTOGRAM[c++];
-        count = 17;
+        answer[index % LENGTH] = cryptogram[c++];
     }
-
-    // Print the answer
-    // printf doesn't work if the string doesn't finish by '\0'
-    answer[length] = '\0'; 
     printf("Answer : %s\n", answer);
-
-    // Return exit code
-    return 0;
 }
