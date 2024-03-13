@@ -22,7 +22,8 @@ struct GpsPoint
 void display(struct GpsPoint *point)
 {
     printf("GPSPoint { Lat : %f | Lon : %f | Alt : %f\n",
-           point->altitude,
+           (*point).altitude,
+           // point->altitude,
            point->latitude,
            point->altitude);
 }
