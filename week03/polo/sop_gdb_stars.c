@@ -11,14 +11,13 @@ Program runs (yes or no, because):
 
 
 void star(int n, double rint, double rext) {
-    for (int i = 0; i < 5; i++) {
-        double angle = M_PI * 2.0 / n * i;
-        // Exercise 2. Replace the data type double of x by int
-        double x = cos(angle) * rext;
+    for (int i = 0; i < 5; i++) {             // Exercise 1. Observe the value of i
+        double angle = M_PI * 2.0 / n * i;    // Exercise 1. Observe the value of angle
+        double x = cos(angle) * rext;		  // Exercise 2. Replace the data type double of x by int
         double y = sin(angle) * rext;
         printf("%0.1f, %0.1f\n", x, y);
 
-        angle = M_PI * 2.0 / n * (i + 0.5);
+        angle = M_PI * 2.0 / n * (i + 0.5);   // Exercise 1. Observe the value of angle
         x = cos(angle) * rint;
         y = sin(angle) * rint;
         printf("%0.1f, %0.1f\n", x, y);
