@@ -22,3 +22,28 @@ echo "Compiling $1 with debugging options -g"
 # -ggdb     Produce debugging information for use by GDB
 # "$(basename "$1" .c)"    Remove ".c" 
 gcc -Wall -ggdb $1 -o "$(basename "$1" .c)_debug.out" -lm
+
+# Observe the values of i at the end of line 14 
+# and angle at the end of lines 15 and 20. 
+# Add also a watch on the value of i and x while running the loop.
+
+
+gdb ./"$(basename "$1" .c)_debug.out" <<EOF
+break 15
+break 22
+run
+printf "i \n"
+print i
+printf "angle \n"
+print angle
+continue
+printf "angle \n"
+print angle
+watch i
+watch x
+c
+c
+c
+c
+c
+EOF
