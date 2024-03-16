@@ -28,3 +28,20 @@ int main(int argc, char * argv[]) {
 	star(5, 50, 100);
     return 0;
 }
+
+/*
+DEBUG SCRIPT 
+gcc -ggdb sop_gdb_stars.c -o sop_gdb_stars_debug.out -lm
+gdb ./sop_gdb_stars_debug.out 
+(gdb) lay next
+(gdb) list
+(gdb) break 15
+(gdb) run
+(gdb) print i
+(gdb) break 16
+(gdb) continue
+(gdb) print angle
+(gdb) break 21
+(gdb) continue
+(gdb) print angle
+*/

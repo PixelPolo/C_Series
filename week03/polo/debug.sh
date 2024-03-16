@@ -29,6 +29,8 @@ gcc -Wall -ggdb $1 -o "$(basename "$1" .c)_debug.out" -lm
 
 
 gdb ./"$(basename "$1" .c)_debug.out" <<EOF
+lay next
+list
 break 15
 break 22
 run
@@ -39,11 +41,11 @@ print angle
 continue
 printf "angle \n"
 print angle
-watch i
-watch x
-c
-c
-c
-c
-c
+clear 15
+clear 22
+while i < 5
+print i
+print x
+continue
+end
 EOF
