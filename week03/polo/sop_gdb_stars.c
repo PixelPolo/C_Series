@@ -12,7 +12,9 @@ Program runs (yes or no, because):
 
 void star(int n, double rint, double rext) {
     for (int i = 0; i < 5; i++) {             // Exercise 1. Observe the value of i
-        double angle = M_PI * 2.0 / n * i;    // Exercise 1. Observe the value of angle
+        int pi = (M_PI * 2.0); // Modif for B part 
+        double angle = pi / n * i;    
+        // double angle = M_PI * 2.0 / n * i; // Exercise 1. Observe the value of angle
         double x = cos(angle) * rext;		  // Exercise 2. Replace the data type double of x by int
         double y = sin(angle) * rext;
         printf("%0.1f, %0.1f\n", x, y);
@@ -30,7 +32,7 @@ int main(int argc, char * argv[]) {
 }
 
 /*
-DEBUG SCRIPT 
+A. DEBUG SCRIPT 
 gcc -ggdb sop_gdb_stars.c -o sop_gdb_stars_debug.out -lm
 gdb ./sop_gdb_stars_debug.out 
 (gdb) lay next
@@ -44,4 +46,13 @@ gdb ./sop_gdb_stars_debug.out
 (gdb) break 21
 (gdb) continue
 (gdb) print angle
+
+PROBLEM FOR ME 
+For loop with x and i...
+*/
+
+/*
+B. LIMIT OF THE PROGRAM
+PROBLEM FOR ME
+Impossible to generate the core dump...
 */
