@@ -3,7 +3,7 @@
 
 int main(int argc, char const *argv[])
 {
-    for (int i = 1; i < 5; i++)
+    for (int i = 0; i < 5; i++)
     {
         double x = 10.0 / i;
         printf("%f\n", x);
