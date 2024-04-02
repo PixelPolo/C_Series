@@ -2,7 +2,7 @@
 .o
 
 # Ignorer les fichiers exécutables (sur Linux/Unix)
-.out
+*.out
 # Pour Windows
 .exe
 
