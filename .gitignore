@@ -3,6 +3,7 @@
 
 # Ignorer les fichiers exécutables (sur Linux/Unix)
 *.out
+
 # Pour Windows
 .exe
 
