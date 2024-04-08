@@ -61,7 +61,7 @@ int readLine(char *line, struct GpsPoint *point)
     point->latitude = atof(token);
     token = strtok(NULL, ",");
     point->longitude = atof(token);
-    token = strtok(NULL, ",");
+    token = strtok(NULL, "\0");
     point->altitude = atof(token);
     return 1;
 }
