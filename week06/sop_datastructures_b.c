@@ -7,23 +7,25 @@ Program runs (yes or no, because): Yes
 #include <stdio.h>
 #include <stdlib.h>
 
-//***** Linked Stack *****
+/*
+    Linked Stack of int
+*/
 
-// Node struct
+// ***** Node struct *****
 struct NodeStack
 {
     int data;
     struct NodeStack *next;
 };
 
-// New Node
+// ***** New Node *****
 struct NodeStack *newNode(int data)
 {
-    // malloc for new node
+    // Malloc for new node
     struct NodeStack *node = malloc(sizeof(struct NodeStack));
     if (node == NULL)
     {
-        printf("Malloc failed !\n");
+        printf("Malloc failed...\n");
         exit(1);
     }
     node->data = data;
@@ -31,13 +33,13 @@ struct NodeStack *newNode(int data)
     return node;
 }
 
-// Is Empty
+// ***** Is Empty *****
 int isEmpty(struct NodeStack *top)
 {
     return !top;
 }
 
-// Push
+// ***** Push *****
 void push(struct NodeStack **top, int data)
 {
     struct NodeStack *nNode = newNode(data); // Create a new Node
@@ -45,7 +47,7 @@ void push(struct NodeStack **top, int data)
     *top = nNode;                            // Move top pointer
 }
 
-// Peek
+// ***** Peek *****
 int peek(struct NodeStack *top)
 {
     if (isEmpty(top))
@@ -56,7 +58,7 @@ int peek(struct NodeStack *top)
     return top->data;
 }
 
-// Pop
+// ***** Pop *****
 int pop(struct NodeStack **top)
 {
     if (isEmpty(*top))
@@ -71,7 +73,7 @@ int pop(struct NodeStack **top)
     return data;
 }
 
-// Iteration
+// ***** Iteration *****
 void printStack(struct NodeStack *top)
 {
     printf("\n");

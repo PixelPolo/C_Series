@@ -122,6 +122,7 @@ void *dequeue(struct LinkedQueue *queue)
     return data;
 }
 
+// ***** Main *****
 int main(int argc, char const *argv[])
 {
     printf("\n");
