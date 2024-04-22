@@ -53,6 +53,7 @@ int isEmpty(struct LinkedQueue *queue)
     return queue->size == 0;
 }
 
+// ***** Size ******
 int size(struct LinkedQueue *queue)
 {
     return queue->size;

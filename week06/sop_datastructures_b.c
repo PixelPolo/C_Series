@@ -93,9 +93,9 @@ void swap_ptr(struct NodeStack **top)
     if (*top != NULL && (*top)->next != NULL)
     {
         struct NodeStack *temp = *top;
-        *top = (*top)->next;
-        temp->next = (*top)->next;
-        (*top)->next = temp;
+        *top = temp->next; // Move *top to 2
+        temp->next = (*top)->next; // 1 -> 3
+        (*top)->next = temp; // 2 -> 1
     }
 }
 
