@@ -58,6 +58,7 @@ void findEarthquake(double *earthquake, int start, int length)
 {
     // Comsmetic
     printf("\n");
+
     // local variables
     double threshold = 20.00;
     int startIndex = 0;
@@ -118,7 +119,7 @@ void findEarthquake(double *earthquake, int start, int length)
         // Print
         printf("Earthquake has not finished...\n");
         // Compute the energy from start to the max value of the file input
-        energy = calculateEnegy(earthquake, startIndex, length);
+        energy = calculateEnegy(earthquake, startIndex, length - 1);
     }
 
     // Print the energy
